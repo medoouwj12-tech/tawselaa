@@ -48,7 +48,6 @@
         }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; }
         
-        /* تعديل ستايل اللوجو ليناسب صورة العميل */
         .logo { display: flex; align-items: center; text-decoration: none; }
         .logo img { height: 55px; width: auto; object-fit: contain; transition: transform 0.4s; filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3)); }
         .logo:hover img { transform: scale(1.05); }
@@ -65,8 +64,6 @@
 
         /* Hero Section */
         .hero { min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-deep); padding-top: 80px; }
-        
-        /* صورة خلفية الهيرو الحقيقية للعميل */
         .hero-bg {
             position: absolute; inset: 0; opacity: 0.25;
             background: url('hero-bg.jpg') center/cover no-repeat;
@@ -88,7 +85,7 @@
         .btn-secondary { background: rgba(212, 175, 55, 0.02); color: #FFFFFF; padding: 1.1rem 2.4rem; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 1px solid rgba(212,175,55,0.4); transition: all 0.3s; }
         .btn-secondary:hover { background: rgba(212, 175, 55, 0.12); border-color: var(--gold-light); transform: translateY(-2px); }
 
-        /* سيكشن الإحصائيات الفاخر مع العداد الذكي */
+        /* Stats Counters */
         .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto; }
         .stat-card { background: var(--bg-cards); border: 1px solid var(--border-color); border-radius: 1.2rem; padding: 1.2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
         .stat-card:hover { transform: scale(1.05); border-color: rgba(212, 175, 55, 0.3); box-shadow: 0 15px 35px rgba(212, 175, 55, 0.08); }
@@ -106,8 +103,6 @@
         /* About Section */
         .about { background: var(--bg-luxury); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        
-        /* صورة الباص الحقيقية للعميل في سيكشن عن الشركة */
         .about-img { position: relative; border-radius: 1.8rem; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid var(--border-color); }
         .about-img img { width: 100%; height: 470px; object-fit: cover; display: block; filter: brightness(75%) contrast(105%); transition: transform 0.6s; }
         .about-img:hover img { transform: scale(1.04); }
@@ -134,10 +129,32 @@
         .uni-card h3 { color: #FFFFFF; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.3rem; }
         .uni-card .ar { color: var(--gold); font-weight: 600; font-size: 0.9rem; }
 
-        /* Media Section - تعديل الـ Video Container */
+        /* 🔥 سيكشن الميديا الجديد: معرض فيديوهات احترافي ومتعدد */
         .media-section { background: var(--bg-luxury); }
-        .video-container { max-width: 850px; margin: 2rem auto 0; border-radius: 2rem; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.6); border: 1px solid var(--border-color); background: #000; aspect-ratio: 16/9; }
+        .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+        
+        .video-box { 
+            background: var(--bg-cards); 
+            border: 1px solid var(--border-color); 
+            border-radius: 1.8rem; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transition: all 0.4s ease;
+        }
+        .video-box:hover {
+            border-color: rgba(212,175,55,0.4);
+            transform: translateY(-5px);
+        }
+        .video-container { 
+            width: 100%; 
+            aspect-ratio: 16/9; 
+            background: #000; 
+            position: relative;
+        }
         .video-container video { width: 100%; height: 100%; display: block; object-fit: cover; }
+        .video-info { padding: 1.2rem 1.5rem; }
+        .video-info h4 { color: #FFFFFF; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .video-info p { color: var(--text-muted); font-size: 0.85rem; }
 
         /* Booking Section */
         .booking { background: var(--bg-deep); border-top: 1px solid var(--border-color); position: relative; overflow: hidden; }
@@ -167,7 +184,6 @@
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
         .form-group { margin-bottom: 1.2rem; }
         .form-group label { display: block; color: #FFFFFF; font-weight: 700; font-size: 0.88rem; margin-bottom: 0.5rem; transition: color 0.3s; }
-        .form-card id:focus-within label { color: var(--gold-light); }
         .form-group input, .form-group select { width: 100%; padding: 0.9rem 1.2rem; border: 1px solid var(--border-color); border-radius: 1rem; font-family: 'Cairo', sans-serif; font-size: 0.9rem; color: #FFFFFF; background: #000000; outline: none; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .form-group input:focus, .form-group select:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15); background: #050505; }
         
@@ -202,7 +218,7 @@
         .whatsapp-btn:hover { transform: translateY(-7px) scale(1.08); box-shadow: 0 15px 35px rgba(37,211,102,0.65); }
         .whatsapp-btn svg { width: 32px; height: 32px; fill: #FFFFFF; }
 
-        @media (max-width: 1024px) { .about-grid, .booking-grid { grid-template-columns: 1fr; gap: 3rem; } .uni-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+        @media (max-width: 1024px) { .about-grid, .booking-grid { grid-template-columns: 1fr; gap: 3rem; } .uni-grid { grid-template-columns: repeat(2, 1fr); } .video-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
         @media (max-width: 768px) { .hero h1 { font-size: 2.3rem; } .hero-stats { grid-template-columns: repeat(2, 1fr); } .nav-links, .nav-actions .nav-cta { display: none; } .mobile-toggle { display: block; } .uni-grid, .form-row, .contact-boxes { grid-template-columns: 1fr; } }
 
         .mobile-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #0b0b0b; border-top: 1px solid var(--border-color); padding: 1.5rem; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
@@ -360,16 +376,65 @@
     <section class="media-section reveal">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">📺 فيديو تعريفي</div>
+                <div class="section-badge">📺 فيديوهات أسطولنا</div>
                 <h2 class="section-title">شاهد جودة خدماتنا على الطبيعة</h2>
-                <p class="section-desc">فيديو من أسطول باصات توصيلة الفاخرة ومستوى التزامنا وراحتكم</p>
+                <p class="section-desc">جولة حية داخل أتوبيسات توصيلة الفاخرة لترى مستوى الالتزام والراحة بنفسك</p>
             </div>
             
-            <div class="video-container">
-                <video controls poster="hero-bg.jpg">
-                    <source src="promo-video.mp4" type="video/mp4">
-                    متصفحك لا يدعم تشغيل هذا الفيديو.
-                </video>
+            <div class="video-grid">
+                
+                <div class="video-box">
+                    <div class="video-container">
+                        <video controls poster="bus-cover.jpg">
+                            <source src="promo-video1.mp4" type="video/mp4">
+                            متصفحك لا يدعم تشغيل هذا الفيديو.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h4>الرحلة اليومية لطلاب الجامعة البريطانية وبدر</h4>
+                        <p>تغطية حية لراحة الطلاب والتزام السائقين بالمواعيد الصباحية.</p>
+                    </div>
+                </div>
+
+                <div class="video-box">
+                    <div class="video-container">
+                        <video controls poster="bus-cover.jpg">
+                            <source src="promo-video2.mp4" type="video/mp4">
+                            متصفحك لا يدعم تشغيل هذا الفيديو.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h4>تجهيزات الأتوبيسات وأنظمة التكييف والراحة</h4>
+                        <p>نظرة من الداخل على خدمات الـ VIP والمواصفات الحصرية لأسطولنا.</p>
+                    </div>
+                </div>
+
+                <div class="video-box">
+                    <div class="video-container">
+                        <video controls poster="bus-cover.jpg">
+                            <source src="promo-video3.mp4" type="video/mp4">
+                            متصفحك لا يدعم تشغيل هذا الفيديو.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h4>رحلات الامتحانات والترم الصيفي المباشرة</h4>
+                        <p>التزامنا مستمر طوال العام لضمان تركيزك الكامل في دراستك.</p>
+                    </div>
+                </div>
+
+                <div class="video-box">
+                    <div class="video-container">
+                        <video controls poster="bus-cover.jpg">
+                            <source src="promo-video4.mp4" type="video/mp4">
+                            متصفحك لا يدعم تشغيل هذا الفيديو.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h4>فريق الدعم الفني وتنسيق خطوط السير</h4>
+                        <p>خلف الكواليس.. كيف نضمن وصول كل طالب حتى باب جامعته بأمان.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -516,7 +581,6 @@
             reveals.forEach(reveal => observer.observe(reveal));
         }
 
-        // العداد الذكي التفاعلي
         function initCounters() {
             const statsSection = document.querySelector('.hero-stats');
             const counters = document.querySelectorAll('.stat-value');
