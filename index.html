@@ -129,7 +129,7 @@
         .uni-card h3 { color: #FFFFFF; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.3rem; }
         .uni-card .ar { color: var(--gold); font-weight: 600; font-size: 0.9rem; }
 
-        /* 🔥 سيكشن الميديا الجديد: معرض فيديوهات احترافي ومتعدد */
+        /* Media Section - معرض فيديوهات احترافي ومتعدد وجاهز للتشغيل */
         .media-section { background: var(--bg-luxury); }
         .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
         
@@ -148,10 +148,15 @@
         .video-container { 
             width: 100%; 
             aspect-ratio: 16/9; 
-            background: #000; 
+            background: #000000; 
             position: relative;
         }
-        .video-container video { width: 100%; height: 100%; display: block; object-fit: cover; }
+        .video-container video { 
+            width: 100%; 
+            height: 100%; 
+            display: block; 
+            object-fit: cover; 
+        }
         .video-info { padding: 1.2rem 1.5rem; }
         .video-info h4 { color: #FFFFFF; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
         .video-info p { color: var(--text-muted); font-size: 0.85rem; }
@@ -385,7 +390,7 @@
                 
                 <div class="video-box">
                     <div class="video-container">
-                        <video controls poster="bus-cover.jpg">
+                        <video controls preload="auto" poster="bus-cover.jpg" playsinline>
                             <source src="promo-video1.mp4" type="video/mp4">
                             متصفحك لا يدعم تشغيل هذا الفيديو.
                         </video>
@@ -398,7 +403,7 @@
 
                 <div class="video-box">
                     <div class="video-container">
-                        <video controls poster="bus-cover.jpg">
+                        <video controls preload="auto" poster="bus-cover.jpg" playsinline>
                             <source src="promo-video2.mp4" type="video/mp4">
                             متصفحك لا يدعم تشغيل هذا الفيديو.
                         </video>
@@ -411,7 +416,7 @@
 
                 <div class="video-box">
                     <div class="video-container">
-                        <video controls poster="bus-cover.jpg">
+                        <video controls preload="auto" poster="bus-cover.jpg" playsinline>
                             <source src="promo-video3.mp4" type="video/mp4">
                             متصفحك لا يدعم تشغيل هذا الفيديو.
                         </video>
@@ -424,7 +429,7 @@
 
                 <div class="video-box">
                     <div class="video-container">
-                        <video controls poster="bus-cover.jpg">
+                        <video controls preload="auto" poster="bus-cover.jpg" playsinline>
                             <source src="promo-video4.mp4" type="video/mp4">
                             متصفحك لا يدعم تشغيل هذا الفيديو.
                         </video>
